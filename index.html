@@ -1,214 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sakshi Kaul Law Office</title>
-    <link href="bootstrap.min.css" rel="stylesheet">   
-    <style>
-        .btn-whatsapp {
-            display: inline-block;
-            padding: 10px 20px;
-            background-image: url(https://static.whatsapp.net/rsrc.php/yZ/r/JvsnINJ2CZv.svg);
-            height: 31px;
-            width: 131px;
-            color: white; /* Text color */
-            text-decoration: none; /* Remove underline */
-            border-radius: 5px; /* Rounded corners */
-            font-size: 16px; /* Font size */
-            transition: background-color 0.3s; /* Smooth transition */
-            position: fixed;
-            right: 40px;
-            bottom: 40px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="title" content="Sakshi Kaul Law Office - Trusted Legal Services">
+    <meta name="description" content="Sakshi Kaul Law Office provides expert legal services in Criminal Law, Family Law, Consumer Protection, and more. Get personalized legal advice today.">
+    <meta name="keywords" content="Sakshi Kaul, law office, legal services, criminal law, family law, consumer protection, legal advice, lawyer, legal representation, Delhi">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sakshi Kaul">
 
-        body {
-            font-family: Arial, sans-serif;
-            word-wrap: break-word;
-        }
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sakshi Kaul Law Office - Trusted Legal Services">
+    <meta property="og:description" content="Get expert legal services in criminal law, family law, consumer protection, and more from Sakshi Kaul Law Office.">
+    <meta property="og:image" content="path_to_your_image.jpg">
+    <meta property="og:url" content="https://www.sakshilawoffice.com">
+    <meta property="og:type" content="website">
+  <title>Sakshi Kaul Law Office</title>
+  <link href="bootstrap.min.css" rel="stylesheet"/>
 
-        /* Hero Section */
-        .hero {
-            background: url('drawings-about-legal-profession.jpg') center/cover no-repeat;
-            height: 100vh;
-            color: white;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 20px;
-            position: relative;
-        }
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      word-wrap: break-word;
+    }
 
-        /* Background overlay for better readability */
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-            z-index: 1;
-        }
+    /* Navbar */
+    .navbar, .footer {
+      background-color: #222;
+    }
 
-        /* Ensure text is above overlay */
-        .hero h1, .hero p {
-            position: relative;
-            z-index: 2;
-        }
+    .navbar .nav-link {
+      color: white;
+    }
 
-        /* Responsive Hero Section */
-        @media (max-width: 768px) {
-            .hero {
-                height: 60vh;
-                padding: 10px;
-            }
-        }
+    .navbar .nav-link:hover {
+      color: #d4af37;
+    }
 
-        /* Headings */
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            overflow-wrap: break-word;
-            max-width: 80%;
-            margin: 10px auto;
-        }
+    /* Hero Section */
+    .hero {
+      background: url('drawings-about-legal-profession.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-        .hero p {
-            font-size: clamp(1rem, 3vw, 1.2rem);
-            max-width: 600px;
-            overflow-wrap: break-word;
-        }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
 
-        .disclaimer-popup {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999; /* Ensure it's above all other elements */
-        }
+    .hero h1,
+    .hero p {
+      position: relative;
+      z-index: 2;
+    }
 
-        .disclaimer-box {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-            max-width: 500px;
-            position: relative;
-            z-index: 10000; /* Ensures the box stays above everything */
-        }
+    .hero p {
+      font-size: 1.2rem;
+    }
 
-        /* Carousel Styling */
-        .carousel-item {
-            text-align: center;
-        }
+    /* Sections */
+    section {
+      padding: 60px 20px;
+    }
 
-        .carousel-item h4 {
-            font-size: 1.5rem;
-            color: #333;
-        }
+    section h2 {
+      color: #222;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-        .carousel-item p {
-            font-size: 1.2rem;
-            color: #777;
-        }
+    #services ul {
+      padding-left: 20px;
+    }
 
-        /* General Section Styling */
-        section h2, section h4, section p, ul, li {
-            overflow-wrap: break-word;
-            max-width: 100%;
-        }
+    #services li {
+      margin-bottom: 10px;
+    }
 
-        #services {
-            padding-top: 10px; /* Adjust based on navbar height */
-        }
+    /* Disclaimer */
+    .disclaimer-popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
 
-        /* Navbar and Footer Color */
-        .navbar, .footer {
-            background-color: #333; /* Dark background */
-        }
+    .disclaimer-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
 
-        .navbar .nav-link {
-            color: white; /* Default text color */
-        }
+    /* WhatsApp Button */
+    .btn-whatsapp {
+      position: fixed;
+      right: 40px;
+      bottom: 40px;
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      font-weight: bold;
+      padding: 10px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
 
-        .navbar .nav-link:hover {
-            color: #d4af37; /* Gold color on hover */
-        }
+    .btn-whatsapp:hover {
+      background-color: #1ebc57;
+    }
 
-       /* Footer Links Hover Effect */
-.footer a {
-    color: white; /* Default text color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s; /* Smooth transition */
+    /* Footer */
+    .footer a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: gold;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 60vh;
+      }
+    }
+    #testimonials {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-.footer a:hover {
-    color: gold; /* On hover, color changes to gold */
+#testimonials h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 40px;
+    font-weight: bold;
+    border-left: 5px solid #d4af37;
+    padding-left: 15px;
 }
 
-/* For footer links that are not hovered over */
-.footer a:not(:hover) {
-    color: white; /* Default color */
+/* blockquote {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    position: relative;
 }
 
+blockquote footer {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px;
+} */
+.blockquote-footer {
+    font-size: 1rem;
+    color: #777;
+    margin-top: 10px; /* Adjust space above the footer */
+    font-weight: bold; /* Make the name stand out more */
+}
 
+.blockquote-footer cite {
+    display: block; /* Ensure the name is displayed as a block element, stacked above the text */
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333; /* Make the name stand out with a darker color */
+}
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #d4af37; /* Gold color for navigation */
+}
 
-    </style>
+/* Optional: Add a subtle shadow for a floating effect */
+.carousel-inner {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+    padding: 20px;
+}
+
+  </style>
 </head>
 <body>
+  <!-- Disclaimer Popup -->
   <div id="disclaimerPopup" class="disclaimer-popup">
     <div class="disclaimer-box">
-        <h3>Disclaimer</h3>
-        <p>The Bar Council of India does not permit soliciting work or advertising in any form or manner. By accessing this website, you acknowledge that:</p>
-        <p>1. You are seeking information about Sakshi Law Office and there has been no form of solicitation or advertisement by Sakshi Law Office.</p>
-        <p>2. This website is for general informational purposes and should not be construed as providing any sort of legal advice.</p>
-        <button id="agreeButton" class="btn btn-primary">I Agree</button>
+      <h3>Disclaimer</h3>
+      <p>The Bar Council of India does not permit soliciting work or advertising in any form or manner. By accessing this website, you acknowledge that:</p>
+      <p>1. You are seeking information about Sakshi Law Office and there has been no form of solicitation or advertisement by Sakshi Law Office.</p>
+      <p>2. This website is for general informational purposes and should not be construed as providing any sort of legal advice.</p>
+      <button id="agreeButton" class="btn btn-primary mt-3">I Agree</button>
     </div>
   </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="SakshiLaw_Logo.png" alt="Sakshi Law Office Logo" style="height: 100px; width: auto; margin-right: -5px;">
-                Law Office
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Practice Areas</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#results">Case Results</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <header id="home" class="hero">
-        <div class="container text-top" style="color:black;">
-            <p>Justice with Dedication.&nbsp;Advocacy with Heart.</p>
-        </div>
-    </header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="SakshiLaw_Logo.png" alt="Logo" style="height: 100px;" />
+        Law Office
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Practice Areas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <section id="story"><h2>Our Story</h2><p class="lead">Founded with a vision to provide exceptional legal services, SakhiKaulLaw is committed to ensuring justice and fairness for all. With a strong foundation in legal expertise, we have built a reputation for excellence, trust, and dedication.</p>
-        <p>Our journey began with a simple mission – to make legal assistance accessible and transparent. Over the years, we have successfully represented numerous clients, offering personalized legal solutions tailored to their needs.</p></section>
-    <section id="about"><h2>About</h2><h2>About Advocate Sakshi Kaul</h2>
-        <p>Advocate Sakshi Kaul is a dedicated legal professional committed to delivering justice with integrity and diligence. She completed her law degree in 2012 and has been practicing in various legal fields, including Criminal Law, Family Law, Consumer Protection, and Motor Accident Claims.</p>
-        <p>Enrolled with the Bar Council of Delhi in 2012, she is also a proud member of the All India Bar Association. With years of experience, she has built a reputation for her strong legal acumen, client-focused approach, and strategic representation in complex legal matters.</p>
-        <h4>Languages Spoken</h4>
-        <p>English | Hindi | Punjabi</p></section>
-    <section id="services"><h2>Practice Areas</h2>  <ul class="list-unstyled">
+  <!-- Hero -->
+  <header id="home" class="hero">
+    <h1>Justice with Dedication</h1>
+    <p>Advocacy with Heart.</p>
+  </header>
+
+  <!-- Our Story -->
+  <section id="story">
+    <div class="container">
+      <h2>Our Story</h2>
+      <p class="lead">Founded with a vision to provide exceptional legal services, Sakshi Kaul Law Office is committed to ensuring justice and fairness for all. With a strong foundation in legal expertise, we have built a reputation for excellence, trust, and dedication.</p>
+      <p>Our journey began with a simple mission – to make legal assistance accessible and transparent. Over the years, we have successfully represented numerous clients, offering personalized legal solutions tailored to their needs.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>About Advocate Sakshi Kaul</h2>
+      <p>Advocate Sakshi Kaul is a dedicated legal professional committed to delivering justice with integrity and diligence. She completed her law degree in 2012 and has been practicing in various legal fields, including Criminal Law, Family Law, Consumer Protection, and Motor Accident Claims.</p>
+      <p>Enrolled with the Bar Council of Delhi in 2012, she is also a proud member of the All India Bar Association. With years of experience, she has built a reputation for her strong legal acumen, client-focused approach, and strategic representation in complex legal matters.</p>
+      <h4>Languages Spoken</h4>
+      <p>English | Hindi | Punjabi</p>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section id="services">
+    <div class="container">
+      <h2>Practice Areas</h2>
+      <ul>
         <li>Criminal Law – Defense in criminal cases, anticipatory bail, and legal representation</li>
         <li>Anti-Corruption Laws – Legal assistance in corruption-related matters</li>
         <li>Anticipatory Bail – Filing and defense against anticipatory bail applications</li>
@@ -223,72 +280,93 @@
         <li>Prevention of Money Laundering Act (PMLA) – Defense and representation in financial crime cases</li>
         <li>POCSO Act – Legal support in cases related to child protection laws</li>
         <li>Women's Rights & Protection – Legal aid and advocacy for women's rights</li>
-    </ul></section>
-    <footer class="footer bg-dark text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2025 Sakshi Kaul Law Office. All Rights Reserved.</p>
-            <p>
-                <a href="https://www.instagram.com/advsakshikaul/?igsh=Ynozb3dqcjA4djc5&utm_source=qr#" target="_blank">Contact</a> | 
-                <a href="#privacy-policy">Privacy Policy</a>
-            </p>
-            <div class="container copyright text-center mt-4">
-                <div class="credits">                
-                    Designed by <a href="https://www.topinfosys.com/" target="_blank">TopInfoSys</a>
-                </div>
+      </ul>
+    </div>
+  </section>
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">"Sakshi Kaul provided exceptional legal guidance through a very challenging time. She was knowledgeable, compassionate, and always kept me informed. I highly recommend her services!"</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Akshay Singh</cite></footer>
+                </blockquote>
+            </div>
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">"The legal advice and representation I received from Sakshi was top-notch. Her professionalism and dedication were evident every step of the way. Thank you for everything!"</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Avinash Kumar</cite></footer>
+                </blockquote>
+            </div>
+            <div class="carousel-item">
+                <blockquote class="blockquote text-center">
+                    <p class="mb-0">"I am grateful for Sakshi’s legal expertise and her approach to making me feel comfortable throughout the process. She’s a brilliant lawyer and a wonderful person!"</p>
+                    <footer class="blockquote-footer"><cite title="Source Title">Raj Patel</cite></footer>
+                </blockquote>
             </div>
         </div>
-    </footer>
-    
-    
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
 
-    
-    <a class="btn-whatsapp" href="https://api.whatsapp.com/send/?phone=+919812985503&text=Hi&type=phone_number&app_absent=0" target="_blank">        
-    </a>    
-    <!--<section id="results"><h2>Case Results</h2><p>Advocate Sakshi Kaul has successfully represented numerous clients in various legal matters. Here are some of her notable case outcomes:</p>
-        <ul class="list-unstyled">
-            <li><strong>Criminal Defense:</strong> Secured acquittal in a high-profile criminal case with lack of evidence.</li>
-            <li><strong>Divorce & Family Law:</strong> Successfully negotiated a fair alimony settlement in a contested divorce case.</li>
-            <li><strong>Consumer Protection:</strong> Won compensation for a client in a misleading advertisement case.</li>
-            <li><strong>Motor Accident Claims:</strong> Assisted a victim in obtaining a substantial compensation settlement.</li>
-            <li><strong>Cheque Bounce Case:</strong> Defended a business owner against wrongful allegations, resulting in case dismissal.</li>
-        </ul></section>
-     <section id="contact"><h2>Contact</h2><p>For legal consultation, get in touch today.</p>
-        <p>Email: advocate.sakshi@example.com | Phone: (123) 456-7890</p></section> -->
-    
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    // Show the disclaimer popup when the page loads
-    document.getElementById("disclaimerPopup").style.display = "flex";
+  <!-- Footer -->
+  <footer class="footer text-white text-center py-4">
+    <div class="container">
+      <p>&copy; 2025 Sakshi Kaul Law Office. All Rights Reserved.</p>
+      <p>
+        <a href="https://www.instagram.com/advsakshikaul/" target="_blank">Contact</a> | 
+        <a href="#privacy-policy">Privacy Policy</a>
+      </p>
+      <div class="credits">Designed by <a href="https://www.topinfosys.com/" target="_blank">TopInfoSys</a></div>
+    </div>
+  </footer>
 
-    // Hide the disclaimer popup when the "I Agree" button is clicked
-    document.getElementById("agreeButton").addEventListener("click", function() {
-        document.getElementById("disclaimerPopup").style.display = "none";
-    });
-});
+  <!-- WhatsApp Button -->
+  <a class="btn-whatsapp" href="https://api.whatsapp.com/send/?phone=+919812985503&text=Hi&type=phone_number" target="_blank">
+    Chat on WhatsApp
+  </a>
 
+  <!-- Scripts -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const popup = document.getElementById("disclaimerPopup");
+      const agreeBtn = document.getElementById("agreeButton");
+
+      if (popup && agreeBtn) {
+        agreeBtn.addEventListener("click", function () {
+          popup.style.display = "none";
+        });
+      }
 
       document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-          link.addEventListener('click', function(event) {
-              event.preventDefault();
-              let targetId = this.getAttribute('href');
-              let targetElement = document.querySelector(targetId);
-              
-              
-              if (targetElement) {
-                  window.scrollTo({
-                      top: targetElement.offsetTop -150,
-                      behavior: 'smooth'
-                  });
-              }
+        link.addEventListener('click', function (event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
 
-              let navbarToggler = document.querySelector('.navbar-toggler');
-              let navbarCollapse = document.querySelector('.navbar-collapse');
-              if (navbarToggler && navbarCollapse.classList.contains('show')) {
-                  navbarToggler.click();
-              }
-          });
+          const navbarToggler = document.querySelector('.navbar-toggler');
+          const navbarCollapse = document.querySelector('.navbar-collapse');
+          if (navbarToggler && navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+          }
+        });
       });
-    </script>
-    <script src="bootstrap.bundle.min.js"></script>
+    });
+  </script>
 </body>
 </html>
