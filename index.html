@@ -4,24 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="title" content="Sakshi Kaul Law Office - Trusted Legal Services">
-    <meta name="description" content="Sakshi Kaul Law Office provides expert legal services in Criminal Law, Family Law, Consumer Protection, and more. Get personalized legal advice today.">
-    <meta name="keywords" content="Sakshi Kaul, law office, legal services, criminal law, family law, consumer protection, legal advice, lawyer, legal representation, Delhi">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Sakshi Kaul">
+  <meta name="description" content="Sakshi Kaul Law Office provides expert legal services in Criminal Law, Family Law, Consumer Protection, and more. Get personalized legal advice today.">
+  <meta name="keywords" content="Sakshi Kaul, law office, legal services, criminal law, family law, consumer protection, legal advice, lawyer, legal representation, Delhi">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Sakshi Kaul">
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Sakshi Kaul Law Office - Trusted Legal Services">
-    <meta property="og:description" content="Get expert legal services in criminal law, family law, consumer protection, and more from Sakshi Kaul Law Office.">
-    <meta property="og:image" content="path_to_your_image.jpg">
-    <meta property="og:url" content="https://www.sakshilawoffice.com">
-    <meta property="og:type" content="website">
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Sakshi Kaul Law Office - Trusted Legal Services">
+  <meta property="og:description" content="Get expert legal services in criminal law, family law, consumer protection, and more from Sakshi Kaul Law Office.">
+  <meta property="og:image" content="SakshiLaw_Logo.png">
+  <meta property="og:url" content="https://www.sakshilawoffice.com">
+  <meta property="og:type" content="website">
   <title>Sakshi Kaul Law Office</title>
   <link href="bootstrap.min.css" rel="stylesheet"/>
+  <!-- Import professional fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
+    /* Base Typography */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #333;
       word-wrap: break-word;
+    }
+
+    /* Navigation */
+    .navbar-brand {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .navbar .nav-link {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
     }
 
     /* Navbar */
@@ -35,6 +56,25 @@
 
     .navbar .nav-link:hover {
       color: #d4af37;
+    }
+    
+    /* Tagline styling */
+    .navbar-brand .tagline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      font-style: italic;
+      color: #d4af37; /* Gold color */
+      letter-spacing: 0.5px;
+      margin-top: -5px;
+      display: block;
+    }
+
+    /* Make sure the navbar can fit the extra text */
+    @media (max-width: 991px) {
+      .navbar-brand .tagline {
+        font-size: 0.7rem;
+      }
     }
 
     /* Hero Section */
@@ -65,8 +105,21 @@
       z-index: 2;
     }
 
+    .hero h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
     .hero p {
-      font-size: 1.2rem;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 1.4rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
     }
 
     /* Sections */
@@ -74,18 +127,79 @@
       padding: 60px 20px;
     }
 
+    /* Section Headings */
     section h2 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      position: relative;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
       color: #222;
-      margin-bottom: 20px;
       text-align: center;
     }
 
-    #services ul {
+    section h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: #d4af37;
+    }
+
+    section h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #222;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    section h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #555;
+      margin-top: 1.5rem;
+    }
+
+    /* Body Content */
+    section p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    section p.lead {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Lists */
+    section ul {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
       padding-left: 20px;
     }
 
-    #services li {
+    section li {
       margin-bottom: 10px;
+    }
+
+    /* Strong / Bold Emphasis - Standardized */
+    strong, b {
+      font-weight: 600;
+      color: #222;
     }
 
     /* Disclaimer */
@@ -108,6 +222,18 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.2);
     }
 
+    .disclaimer-box h3 {
+      font-family: 'Libre Baskerville', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .disclaimer-box p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
     /* WhatsApp Button */
     .btn-whatsapp {
       position: fixed;
@@ -121,6 +247,11 @@
       border-radius: 50px;
       text-decoration: none;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 0.85rem;
     }
 
     .btn-whatsapp:hover {
@@ -128,6 +259,11 @@
     }
 
     /* Footer */
+    .footer {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+    }
+
     .footer a {
       color: white;
       text-decoration: none;
@@ -138,68 +274,86 @@
       color: gold;
     }
 
+    .footer strong {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Testimonials */
+    #testimonials {
+      padding: 60px 20px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    #testimonials h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 40px;
+      font-weight: bold;
+      border-left: 5px solid #d4af37;
+      padding-left: 15px;
+    }
+
+    #testimonials blockquote {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .blockquote-footer {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .blockquote-footer cite {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      font-style: normal;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: #d4af37;
+    }
+
+    .carousel-inner {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel-item {
+      padding: 20px;
+    }
+
+    /* Responsive Typography */
     @media (max-width: 768px) {
       .hero {
         height: 60vh;
       }
+      
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
+      
+      section h2 {
+        font-size: 1.8rem;
+      }
+      
+      section h3 {
+        font-size: 1.3rem;
+      }
     }
-    #testimonials {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#testimonials h2 {
-    font-size: 2rem;
-    color: #222;
-    margin-bottom: 40px;
-    font-weight: bold;
-    border-left: 5px solid #d4af37;
-    padding-left: 15px;
-}
-
-/* blockquote {
-    font-size: 1.2rem;
-    color: #444;
-    max-width: 800px;
-    margin: 0 auto;
-    font-style: italic;
-    position: relative;
-}
-
-blockquote footer {
-    font-size: 1rem;
-    color: #777;
-    margin-top: 10px;
-} */
-.blockquote-footer {
-    font-size: 1rem;
-    color: #777;
-    margin-top: 10px; /* Adjust space above the footer */
-    font-weight: bold; /* Make the name stand out more */
-}
-
-.blockquote-footer cite {
-    display: block; /* Ensure the name is displayed as a block element, stacked above the text */
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #333; /* Make the name stand out with a darker color */
-}
-
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: #d4af37; /* Gold color for navigation */
-}
-
-/* Optional: Add a subtle shadow for a floating effect */
-.carousel-inner {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-item {
-    padding: 20px;
-}
-
   </style>
 </head>
 <body>
@@ -214,12 +368,17 @@ blockquote footer {
     </div>
   </div>
 
-  <!-- Navbar -->
+  <!-- Navbar section with updated logo area -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#home">
-        <img src="SakshiLaw_Logo.png" alt="Logo" style="height: 100px;" />
-        Law Office
+        <div class="d-flex flex-column align-items-start">
+          <div class="d-flex align-items-center">
+            <img src="SakshiLaw_Logo.png" alt="Logo" style="height: 100px;" />
+            <span>Law Office</span>
+          </div>
+          <span class="tagline">Your trusted legal partner in Delhi, India</span>
+        </div>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
@@ -230,6 +389,9 @@ blockquote footer {
           <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Practice Areas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#specialized-expertise">Specialized Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nri-services">NRI Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
         </ul>
       </div>
     </div>
@@ -256,6 +418,7 @@ blockquote footer {
       <h2>About Advocate Sakshi Kaul</h2>
       <p>Advocate Sakshi Kaul is a dedicated legal professional committed to delivering justice with integrity and diligence. She completed her law degree in 2012 and has been practicing in various legal fields, including Criminal Law, Family Law, Consumer Protection, and Motor Accident Claims.</p>
       <p>Enrolled with the Bar Council of Delhi in 2012, she is also a proud member of the All India Bar Association. With years of experience, she has built a reputation for her strong legal acumen, client-focused approach, and strategic representation in complex legal matters.</p>
+      <p>We regularly appear before District Courts, Special NDPS Courts, POCSO Courts, and High Courts across Delhi, NCR, Punjab, Goa, Mumbai, and major airports' jurisdiction areas. Our practice extends nationwide, ensuring comprehensive legal representation regardless of location.</p>
       <h4>Languages Spoken</h4>
       <p>English | Hindi | Punjabi</p>
     </div>
@@ -283,43 +446,127 @@ blockquote footer {
       </ul>
     </div>
   </section>
+
+  <!-- Specialized Legal Expertise -->
+  <section id="specialized-expertise">
+    <div class="container">
+      <h2>Specialized Legal Expertise</h2>
+      
+      <h3>NDPS (Narcotic Drugs and Psychotropic Substances) Cases — Foreigners and NRIs</h3>
+      <p>At <strong>Sakshi Law Office</strong>, we possess <strong>extensive experience and a proven track record</strong> in defending individuals, particularly <strong>foreign nationals and NRIs</strong>, charged under the stringent provisions of the NDPS Act in India.</p>
+      
+      <p>NDPS cases require <strong>meticulous scrutiny of procedural compliance</strong>, including search, seizure, arrest, and forensic reports. Our approach focuses on:</p>
+      <ul>
+        <li><strong>Challenging procedural lapses</strong> and illegal detentions.</li>
+        <li><strong>Securing bail</strong> for foreigners and NRIs with a strategic understanding of flight-risk concerns.</li>
+        <li><strong>Minimizing travel requirements</strong> for overseas clients through robust representation.</li>
+        <li><strong>Handling cases involving commercial quantity and international trafficking charges</strong> with tailored defense strategies.</li>
+        <li><strong>Coordinating with embassies, consulates, and family members</strong> for smooth case management.</li>
+      </ul>
+      
+      <p>We have successfully defended clients in <strong>Delhi, Mumbai, Goa, Haryana, Punjab, Chandigarh, Kerela, Rajasthan, Uttar Pradesh and Bihar and major airports</strong> across India, ensuring that <strong>their rights are protected</strong> despite the harshness of the law. Our team ensures constant communication, careful documentation, and sensitive handling of international cases, recognizing the additional complexities involved.</p>
+      
+      <h3>Defense in Offenses Related to Women and Children</h3>
+      <p>We bring <strong>deep sensitivity and strong courtroom expertise</strong> in defending cases involving offenses against women and children, such as:</p>
+      <ul>
+        <li><strong>POCSO Act cases</strong> (Protection of Children from Sexual Offences)</li>
+        <li><strong>Dowry harassment</strong> and <strong>false 498A cases</strong></li>
+        <li><strong>Sexual assault allegations</strong> (including rape cases under IPC)</li>
+        <li><strong>Domestic violence and protection order cases</strong></li>
+        <li><strong>Child custody and abduction matters</strong> involving NRIs and foreign nationals</li>
+      </ul>
+      
+      <p>Handling such matters demands a balance between <strong>empathy</strong>, <strong>legal acumen</strong>, and <strong>assertive defense strategies</strong>. We approach these cases with:</p>
+      <ul>
+        <li><strong>Confidentiality and Discretion</strong>: Complete privacy and respect for sensitive client matters.</li>
+        <li><strong>Detailed Cross-Examination Strategy</strong>: Focused on exposing contradictions and safeguarding the rights of the accused.</li>
+        <li><strong>Pre-litigation Advisory</strong>: Helping clients avoid unnecessary criminal litigation through negotiation and settlement where possible.</li>
+        <li><strong>Emergency Legal Support</strong>: Swift action in cases involving arrest, custody battles, and interim reliefs.</li>
+      </ul>
+      
+      <p>Our commitment is to <strong>protect the dignity, freedom, and rights of every client</strong>, ensuring that the law is applied <strong>fairly and without prejudice</strong>.</p>
+      
+      <h3>Why Clients Trust Us</h3>
+      <ul>
+        <li>Deep understanding of <strong>technical nuances</strong> under NDPS, POCSO, and other special statutes.</li>
+        <li>Strong <strong>trial advocacy skills</strong> combined with a <strong>strategic, evidence-based defense</strong>.</li>
+        <li><strong>Experience in both Trial and Appellate Courts</strong> — District Courts, High Courts, and Special Courts (NDPS/POCSO).</li>
+        <li><strong>PAN-India Representation</strong>: Ability to handle matters across states without compromising service quality.</li>
+        <li><strong>Client-Centric Approach</strong>: Transparent advice, honest evaluation of case strengths and weaknesses, and regular updates.</li>
+      </ul>
+      
+      <p><em>Whether you are a foreign national charged under NDPS, an NRI facing allegations in India, or an individual wrongly accused under gender-sensitive laws — Sakshi Law Office stands ready to defend your rights with courage, competence, and compassion.</em></p>
+    </div>
+  </section>
+
+  <!-- Legal Services for NRIs -->
+  <section id="nri-services">
+    <div class="container">
+      <h2>Legal Services for NRIs</h2>
+      <h4><em>Trusted Legal Assistance While You Stay Connected Abroad</em></h4>
+      
+      <p>At Sakshi Law Office, we understand the unique legal challenges that Non-Resident Indians (NRIs) face when dealing with cases in India. Whether it's a criminal matter, property dispute, family litigation, or safeguarding your investments, we are here to provide <strong>transparent, professional, and efficient legal services</strong>, tailored for your needs — without the need for constant travel.</p>
+      
+      <h3>Our Key Services for NRIs</h3>
+      <ul>
+        <li><strong>Criminal Defense</strong>: Handling FIRs, bail applications, trial representation, and quashing of proceedings.</li>
+        <li><strong>Family and Matrimonial Disputes</strong>: Divorce, child custody, maintenance, and domestic violence matters.</li>
+        <li><strong>Property Disputes</strong>: Illegal possession, ancestral property matters, title verification, and civil litigation.</li>
+        <li><strong>Power of Attorney Assistance</strong>: Drafting and execution to enable trusted legal action on your behalf.</li>
+        <li><strong>Consumer and Financial Disputes</strong>: Protecting your interests against fraud, breach of contract, and investment issues.</li>
+      </ul>
+      
+      <h3>Why Choose Us?</h3>
+      <ul>
+        <li><strong>Video Consultations</strong>: Attend meetings via Zoom, Google Meet, or WhatsApp from anywhere.</li>
+        <li><strong>Time-Zone Friendly Appointments</strong>: Flexible scheduling to suit USA, Canada, UK, Gulf countries, and Australia.</li>
+        <li><strong>Regular Case Updates</strong>: Transparent reporting via email and WhatsApp.</li>
+        <li><strong>Minimum Travel Requirements</strong>: We ensure your physical presence in India is required only when absolutely necessary.</li>
+        <li><strong>End-to-End Support</strong>: From drafting documents to representing you before courts and authorities.</li>
+      </ul>
+      
+      <p><em>Secure your rights while you stay global. Let us handle the complexities in India.</em> <strong>Book a Consultation Today!</strong></p>
+    </div>
+  </section>
+
   <section id="testimonials">
     <h2>What Our Clients Say</h2>
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">"Sakshi Kaul provided exceptional legal guidance through a very challenging time. She was knowledgeable, compassionate, and always kept me informed. I highly recommend her services!"</p>
-                    <footer class="blockquote-footer"><cite title="Source Title">NRI Client, Divorce Case, Canada 2025</cite></footer>
-                </blockquote>
-            </div>
-            <div class="carousel-item">
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">"The legal advice and representation I received from Sakshi was top-notch. Her professionalism and dedication were evident every step of the way. Thank you for everything!"</p>
-                    <footer class="blockquote-footer"><cite title="Source Title">Verified Client, Criminal Case, April 2025</cite></footer>
-                </blockquote>
-            </div>
-            <div class="carousel-item">
-                <blockquote class="blockquote text-center">
-                    <p class="mb-0">"I am grateful for Sakshi’s legal expertise and her approach to making me feel comfortable throughout the process. She’s a brilliant lawyer and a wonderful person!"</p>
-                    <footer class="blockquote-footer"><cite title="Source Title">Verified Client, Civil Litigation Case , Jan 2025</cite></footer>
-                </blockquote>
-            </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">"Sakshi Kaul provided exceptional legal guidance through a very challenging time. She was knowledgeable, compassionate, and always kept me informed. I highly recommend her services!"</p>
+            <footer class="blockquote-footer"><cite title="Source Title">NRI Client, Divorce Case, Canada 2025</cite></footer>
+          </blockquote>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+        <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">"The legal advice and representation I received from Sakshi was top-notch. Her professionalism and dedication were evident every step of the way. Thank you for everything!"</p>
+            <footer class="blockquote-footer"><cite title="Source Title">Verified Client, Criminal Case, April 2025</cite></footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote text-center">
+            <p class="mb-0">"I am grateful for Sakshi's legal expertise and her approach to making me feel comfortable throughout the process. She's a brilliant lawyer and a wonderful person!"</p>
+            <footer class="blockquote-footer"><cite title="Source Title">Verified Client, Civil Litigation Case, Jan 2025</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="footer text-white text-center py-4">
     <div class="container">
+      <p><strong>Serving NRIs, Foreign Nationals, and Individuals Across India — Specialist in NDPS, POCSO, Criminal Law Matters</strong>.</p>
       <p>&copy; 2025 Sakshi Kaul Law Office. All Rights Reserved.</p>
       <p>
         <a href="https://www.instagram.com/advsakshikaul/" target="_blank">Contact</a> | 
