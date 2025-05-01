@@ -361,6 +361,33 @@
   margin-left: auto;
   margin-right: auto;
 }
+.hero2-image {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .hero2-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
 
   </style>
 </head>
@@ -464,17 +491,32 @@
   <!-- About -->
   <section id="about">
     <div class="container">
-      <h2>About Advocate Sakshi Kaul</h2>
-      <p>Advocate Sakshi Kaul is a seasoned legal professional known for her unwavering commitment to justice, legal precision, and client-focused representation. She completed her Bachelor’s in Law in 2012 and went on to earn her Master’s in Law in 2016 — all while being empaneled as Legal Counsel with the Delhi State Legal Services Authority (DSLSA). During this period, she also successfully represented a diverse range of private clients, both national and international.</p>
-      
-      <p>Enrolled with the Bar Council of Delhi and a proud member of the All India Bar Association, she brings over a decade of experience across key areas of law including Criminal Law, Family Law, Consumer Protection, and Motor Accident Claims. Her practice is distinguished by deep legal insight, ethical advocacy, and result-driven strategy.</p>
-      
-      <p>Advocate Kaul regularly appears before District Courts, Special NDPS Courts, POCSO Courts, and High Courts across Delhi, NCR, Punjab, Goa, Mumbai, and jurisdictions of major airports throughout India. With a pan-India footprint, she ensures seamless legal representation for clients regardless of location.</p>
-  
-      <h4>Languages Spoken</h4>
-      <p>English | Hindi | Punjabi</p>
+        <div class="hero2-image">
+            <!-- Replace this comment with the actual path to your image once you have it uploaded -->
+            <img src="two.jpeg" alt="Advocate Sakshi Kaul at the Supreme Court of India">
+            <div class="overlay">
+                <h2>Advocate Sakshi Kaul</h2>
+                <p>Committed to justice, legal precision, and client-focused representation</p>
+            </div>
+        </div>
+        
+        <div class="content">
+            <p>Advocate Sakshi Kaul is a seasoned legal professional known for her unwavering commitment to justice, legal precision, and client-focused representation. She completed her Bachelor's in Law in 2012 and went on to earn her Master's in Law in 2016 — all while being empaneled as Legal Counsel with the Delhi State Legal Services Authority (DSLSA). During this period, she also successfully represented a diverse range of private clients, both national and international.</p>
+            
+            <p>Enrolled with the Bar Council of Delhi and a proud member of the All India Bar Association, she brings over a decade of experience across key areas of law including Criminal Law, Family Law, Consumer Protection, and Motor Accident Claims. Her practice is distinguished by deep legal insight, ethical advocacy, and result-driven strategy.</p>
+            
+            <p>Advocate Kaul regularly appears before District Courts, Special NDPS Courts, POCSO Courts, and High Courts across Delhi, NCR, Punjab, Goa, Mumbai, and jurisdictions of major airports throughout India. With a pan-India footprint, she ensures seamless legal representation for clients regardless of location.</p>
+        
+            <h4>Languages Spoken</h4>
+            <p>English | Hindi | Punjabi</p>
+            
+            <div class="contact-info">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:advsakshikaul@gmail.com">advsakshikaul@gmail.com</a></p>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
   
 
   <!-- Practice Areas -->
